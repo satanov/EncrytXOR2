@@ -16,7 +16,6 @@ public class EncryptXOR {
                     count++;
                     sym = reader.read();
                 }
-
                 return count;
             }
         }
