@@ -29,6 +29,8 @@ public class EncryptXOR {
     }
 }
 
+
 //jar C:\Users\pharaoh\IdeaProjects\EncrytXOR\out\artifacts\EncrytXOR_jar\EncrytXOR.jar
 //input C:\Users\pharaoh\IdeaProjects\EncrytXOR\file\input.txt
 //output C:\Users\pharaoh\IdeaProjects\EncrytXOR\file\output.txt
+//decrypt C:\Users\pharaoh\IdeaProjects\EncrytXOR\file\decrypt.txt
