@@ -39,6 +39,11 @@ public class EncryptXORLauncer {
             return;
         }
 
+        if (inputKey == null && outputKey == null) {
+            System.err.println("invalid key");
+            return;
+        }
+
         String key;
         if (inputKey != null) {
             key = inputKey;
@@ -46,11 +51,30 @@ public class EncryptXORLauncer {
             key = outputKey;
         }
 
+        boolean f = false;
+        for(int i = 0; i < key.length(); i++) {
+            if(!"0123456789abcdef".contains(key.substring(i, i + 1))) {
+                f = true;
+                break;
+            }
+        }
+
+        if(f) {
+           System.err.println("only 0123456789abcdef");
+           return;
+        }
+
+        if(outputName == null) {
+            outputName = inputName + "result";
+        }
+
         try {
             encryption(inputName, outputName, key);
         } catch (IOException e) {
             System.err.println(e.getMessage());
         }
+
+
     }
 
 

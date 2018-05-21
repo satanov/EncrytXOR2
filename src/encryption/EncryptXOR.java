@@ -6,7 +6,7 @@ import java.util.*;
 import java.io.*;
 
 public class EncryptXOR {
-    public static int encryption(InputStream input, String output, String key) throws IOException {
+    private static int encryption(InputStream input, String output, String key) throws IOException {
         try(InputStreamReader reader = new InputStreamReader(input)) {
             try(FileWriter writer = new FileWriter(output)) {
                 int sym = reader.read();
